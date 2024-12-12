@@ -47,7 +47,64 @@ If you are making frontend changes, you can start a development server with
 npm start
 ```
 
-Which will start a server at `http://localhost:8080`, proxying API requests to the replica at port 4943.
+Which will start a server at `http://localhost:4943`, proxying API requests to the replica at port 4943.
+
+### DFX Commands
+```bash
+# Create a new project
+dfx new <project_name>
+
+# Deploy your canisters / push updates
+dfx deploy
+
+# Call a method on a canister
+dfx canister call <canister_name> <method_name> <arguments>
+
+# Get Candid UI for a canister
+dfx canister id __Candid_UI
+
+# Access Candid Interface for a canister
+
+```code
+http://127.0.0.1:4943/?canisterId=<canisterId>&id=<id>
+```
+
+# Open the Candid UI for a canister
+dfx canister --no-wallet call <canister_name> __get_candid_interface_tmp_hack
+
+# Generate the candid interface
+dfx generate
+
+# Build your canisters
+dfx build
+
+# Start the local replica
+dfx start
+
+# Stop the local replica
+dfx stop
+
+# List all canisters
+dfx canister list
+
+# Create a new canister
+dfx canister create <canister_name>
+
+# Install code to a canister
+dfx canister install <canister_name>
+
+# Get the status of a canister
+dfx canister status <canister_name>
+
+# Get the ID of a canister
+dfx canister id <canister_name>
+
+# Delete a canister
+dfx canister delete <canister_name>
+
+# Get help on dfx commands
+dfx help
+```
 
 ### Note on frontend environment variables
 
