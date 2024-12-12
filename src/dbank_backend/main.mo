@@ -12,4 +12,13 @@ actor DBank {
     Debug.print(debug_show (_currentValue));
   };
   // topUp();
+
+  public func withdraw(amount: Nat) {
+    _currentValue -= amount;
+    Debug.print(debug_show (_currentValue));
+  };
+
+  public query func checkBalance() : async Nat {
+    return _currentValue;
+  };
 };
